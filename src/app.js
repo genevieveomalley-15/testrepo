@@ -58,6 +58,7 @@ app.view('asset_request_submit', async ({ ack, body, view, client, logger }) => 
   // Field-level validation surfaces errors inline in the modal.
   const errors = {};
   if (!fields.demoType) errors.demo_type_block = 'Please choose a demo type.';
+  if (!fields.demoType2) errors.demo_type_2_block = 'Please choose a second demo type.';
   if (!fields.product) errors.product_block = 'Please list the product(s) needed.';
   if (!fields.startDate) errors.start_date_block = 'Please choose a start date.';
   if (!fields.endDate) errors.end_date_block = 'Please choose an end date.';
@@ -164,12 +165,11 @@ function buildModal() {
       {
         type: 'input',
         block_id: 'demo_type_2_block',
-        optional: true,
         label: { type: 'plain_text', text: 'Demo type 2' },
         element: {
           type: 'static_select',
           action_id: 'demo_type_2',
-          placeholder: { type: 'plain_text', text: 'Select (optional)' },
+          placeholder: { type: 'plain_text', text: 'Select a demo type' },
           options: selectOptions(DEMO_TYPE_2_OPTIONS),
         },
       },

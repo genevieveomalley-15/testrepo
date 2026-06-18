@@ -8,7 +8,7 @@ The form, opened from a **global shortcut** (the ⚡ menu in Slack), collects:
 | Form field                | Salesforce field (configurable)            |
 | ------------------------- | ------------------------------------------ |
 | Demo type                 | `Demo_Type__c` (picklist)                  |
-| Demo type 2 (optional)    | `Demo_Type_2__c` (picklist)                |
+| Demo type 2               | `Demo_Type_2__c` (picklist)                |
 | What products are needed  | `Product__c`                               |
 | Start date                | `Start_Date__c`                            |
 | End date                  | `End_Date__c`                              |

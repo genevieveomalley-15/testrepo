@@ -1,26 +1,26 @@
 {
   "display_information": {
-    "name": "Product Request",
-    "description": "Collects product requests and sends them to Salesforce.",
+    "name": "Asset Request",
+    "description": "Collects asset requests and sends them to Salesforce.",
     "background_color": "#1f6feb"
   },
   "features": {
     "bot_user": {
-      "display_name": "Product Request",
+      "display_name": "Asset Request",
       "always_online": true
     },
     "shortcuts": [
       {
-        "name": "New product request",
+        "name": "New asset request",
         "type": "global",
-        "callback_id": "open_product_request",
-        "description": "Open a form to request products"
+        "callback_id": "open_asset_request",
+        "description": "Open a form to request assets"
       }
     ]
   },
   "oauth_config": {
     "scopes": {
-      "bot": ["commands", "chat:write"]
+      "bot": ["commands", "chat:write", "users:read", "users:read.email"]
     }
   },
   "settings": {

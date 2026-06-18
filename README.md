@@ -60,9 +60,10 @@ it and it connects to Slack over an outbound WebSocket.
 
 1. **Custom object** — confirm the object and field API names. Defaults assumed
    by this app (override in `.env` if yours differ):
-   - Object: `Product_Request__c`
+   - Object: `Asset_Request__c` (the "Asset Request" custom object)
    - Fields: `Products__c` (long text), `Needed_Date__c` (date),
-     `Location__c` (text), `Requested_By__c` (text)
+     `Location__c` (text), `Requested_By__c` (text) — **confirm these field
+     API names against your object** and override in `.env` if they differ.
 2. **Connected App** — Setup → App Manager → **New Connected App**:
    - Enable **OAuth Settings**.
    - Enable the **Client Credentials Flow** and select a run-as integration

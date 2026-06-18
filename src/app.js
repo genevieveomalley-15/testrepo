@@ -62,6 +62,9 @@ app.view('asset_request_submit', async ({ ack, body, view, client, logger }) => 
   if (!fields.startDate) errors.start_date_block = 'Please choose a start date.';
   if (!fields.endDate) errors.end_date_block = 'Please choose an end date.';
   if (!fields.state) errors.state_block = 'Please choose a state.';
+  if (!fields.purpose) errors.purpose_block = 'Please enter a purpose.';
+  if (!fields.mission) errors.mission_block = 'Please enter a mission set description.';
+  if (!fields.customWork) errors.custom_work_block = 'Please describe the custom work needed.';
   if (
     fields.startDate &&
     fields.endDate &&
@@ -221,7 +224,6 @@ function buildModal() {
       {
         type: 'input',
         block_id: 'purpose_block',
-        optional: true,
         label: { type: 'plain_text', text: 'Purpose' },
         element: {
           type: 'plain_text_input',
@@ -232,7 +234,6 @@ function buildModal() {
       {
         type: 'input',
         block_id: 'mission_block',
-        optional: true,
         label: { type: 'plain_text', text: 'Mission set description' },
         element: {
           type: 'plain_text_input',
@@ -243,7 +244,6 @@ function buildModal() {
       {
         type: 'input',
         block_id: 'custom_work_block',
-        optional: true,
         label: { type: 'plain_text', text: 'Custom work needed' },
         element: {
           type: 'plain_text_input',

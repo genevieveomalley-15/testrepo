@@ -13,9 +13,9 @@ The form, opened from a **global shortcut** (the ⚡ menu in Slack), collects:
 | Start date                | `Start_Date__c`                            |
 | End date                  | `End_Date__c`                              |
 | State (location)          | `SF_FIELD_STATE`, else Mission Set Desc.\* |
-| Purpose (optional)        | `Purpose__c`                               |
-| Mission set desc.(opt.)   | `Mission_Set_Description__c`               |
-| Custom work needed (opt.) | `Custom_Work_Needed__c`                    |
+| Purpose                   | `Purpose__c`                               |
+| Mission set description   | `Mission_Set_Description__c`               |
+| Custom work needed        | `Custom_Work_Needed__c`                    |
 | _Requester (automatic)_   | `OwnerId` (resolved from the Slack user)   |
 
 \* **State storage:** if you set `SF_FIELD_STATE` to a real field API name (e.g.
